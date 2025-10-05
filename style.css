@@ -1,0 +1,89 @@
+/* style.css */
+
+body {
+  background: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calculator {
+  background-color: #2c2c2c;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: right;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  padding: 25px;
+  font-size: 1.2em;
+  border: 1px solid #3a3a3a;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #444;
+}
+
+.btn.operator {
+  background-color: #f69906;
+  color: #fff;
+}
+
+.btn.operator:hover {
+  background-color: #e38d04;
+}
+
+.btn.equal {
+  background-color: #06d6a0;
+  color: #fff;
+  grid-column: span 1;
+}
+
+.btn.equal:hover {
+  background-color: #05b88c;
+}
+
+.btn.clear {
+  background-color: #e63946;
+  color: white;
+}
+
+.btn.clear:hover {
+  background-color: #d62839;
+}
+
+.btn.zero {
+  grid-column: span 2;
+}
+.history {
+  background-color: #1a1a1a;
+  color: #888;
+  font-size: 1em;
+  text-align: right;
+  padding: 10px 20px 0 20px;
+  box-sizing: border-box;
+  height: 30px;
+  overflow: hidden;
+}
