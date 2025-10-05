@@ -16,6 +16,8 @@ buttons.forEach(button => {
       firstOperand = null;
       operator = null;
       waitForSecondOperand = false;
+              history.textContent = ""; // Clear the history after calculation
+
       return;
     }
 
@@ -38,13 +40,15 @@ buttons.forEach(button => {
       firstOperand = parseFloat(display.textContent);
       operator = value;
       waitForSecondOperand = true;
-     history.textContent = `${firstOperand} ${operator}`;      return;
+     history.textContent = `${firstOperand} ${operator}`;   
+        return;
     }
 
     // Equal
     if (value === "=") {
       if (operator && firstOperand !== null) {
         const secondOperand = parseFloat(display.textContent);
+             history.textContent = `${firstOperand} ${operator} ${secondOperand}`;   
         let result;
 
         switch (operator) {
@@ -66,7 +70,6 @@ buttons.forEach(button => {
         firstOperand = result;
         operator = null;
         waitForSecondOperand = true;
-        history.textContent = ""; // Clear the history after calculation
 
       }
       return;
